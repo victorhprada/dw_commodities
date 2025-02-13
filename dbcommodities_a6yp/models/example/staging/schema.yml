@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_commodities
+    description: "Tabela de staging para dados de commodities"
+    columns:
+      - name: Date
+        description: "Data da cotação"
+      - name: Close
+        description: "Preço de fechamento"
+      - name: simbolo
+        description: "Símbolo da commodity"
+
+  - name: stg_movi_commodities
+    description: "Tabela de staging para dados de movimentação de commodities"
+    columns:
+      - name: Date
+        description: "Data da movimentação"
+      - name: symbol
+        description: "Símbolo da commodity"
+      - name: action
+        description: "Ação da movimentação"
+      - name: quantity
+        description: "Quantidade da movimentação"
+
+

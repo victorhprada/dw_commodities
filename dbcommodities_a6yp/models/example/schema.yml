@@ -1,21 +1,32 @@
-
 version: 2
 
-models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+sources:
+  - name: dbcommodities_a6yp
+    schema: public
+    tables:
+      - name: commodities
+        description: "Tabela de commodities"
+        columns:
+          - name: Date
+            description: "Data da cotação"
+          - name: Close
+            description: "Preço de fechamento"
+          - name: simbolo
+            description: "Símbolo da commodity"
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+  - name: dbcommodities_a6yp
+    schema: public
+    tables:
+      - name: movimentacao_commodities
+        description: "Tabela de movimentação de commodities"
+        columns:
+          - name: Date
+            description: "Data da movimentação"
+          - name: symbol
+            description: "Símbolo da commodity"
+          - name: action
+            description: "Ação da movimentação"
+          - name: quantity
+            description: "Quantidade da movimentação"
+
+            
